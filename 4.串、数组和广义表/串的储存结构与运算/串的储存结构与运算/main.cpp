@@ -51,8 +51,8 @@ int Index_BF(SString S,SString T,int pos){
     while (i<=S.length && j<= T.length){        //两个串均未到达串尾
         if(S.ch[i] == T.ch[j]){++i,++j;}        //继续比较后面的字符
         else {i = i-j+2; j=1;}                  //指针后退重新开始匹配
-        if (j>T.length) return i-T.length;      //匹配成功
     }
-    return 0;                                   //匹配失败
+    if (j>T.length) return i-T.length;          //匹配成功
+    else return 0;                              //匹配失败
     
 }
