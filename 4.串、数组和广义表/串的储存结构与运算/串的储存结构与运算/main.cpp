@@ -57,7 +57,7 @@ int Index_BF(SString S,SString T,int pos){
     
 }
 
-
+//Git Hub 尝试
 
 int main(){
     SString S,T;
@@ -71,3 +71,4 @@ int main(){
     else
         cout << "匹配失败！"<<t<<endl;
 }
+
