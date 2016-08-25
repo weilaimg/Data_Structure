@@ -26,6 +26,15 @@ int StrAssign(SString A,char *chars){
     }
 }
 
+//-----next数组-------
+void get_next(SString T,int next[]){
+    int i,j;
+    i = 1;next[1] = 0;j = 0 ;
+    while(i<T[0]){
+        if(j==0||T[i]==T[j]){++i;++j;next[i]=j;}
+        else j = next[j];
+    }
+}
 
 int Index_KMP(SString S ,SString T,int pos , int next[]){
     //利用模式串T的next函数求T在主串中第pos个字符之后的位置
@@ -46,4 +55,14 @@ int Index_KMP(SString S ,SString T,int pos , int next[]){
     }
     if(j > T[0]) return i-T[0];
     else return 0;
+}
+
+int main(){
+    SString A;
+    int p[9];
+    StrAssign(A,"abaabcac");
+    get_next(A,p);
+    for (int i=0;i<=9;i++){
+        cout << *(p+i)<<'\t';
+    }
 }
