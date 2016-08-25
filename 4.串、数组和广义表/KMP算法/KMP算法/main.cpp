@@ -56,13 +56,3 @@ int Index_KMP(SString S ,SString T,int pos , int next[]){
     if(j > T[0]) return i-T[0];
     else return 0;
 }
-
-int main(){
-    SString A;
-    int p[9];
-    StrAssign(A,"abaabcac");
-    get_next(A,p);
-    for (int i=0;i<=9;i++){
-        cout << *(p+i)<<'\t';
-    }
-}
