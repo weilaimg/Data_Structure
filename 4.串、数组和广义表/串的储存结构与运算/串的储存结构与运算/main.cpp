@@ -58,7 +58,6 @@ int Index_BF(SString S,SString T,int pos){
 }
 
 
-
 int main(){
     SString S,T;
     strcpy(S.ch," Hello World");
@@ -71,20 +70,4 @@ int main(){
     else
         cout << "匹配失败！"<<t<<endl;
 }
-
-
-
-int main(){
-    SString S,T;
-    strcpy(S.ch," Hello World");
-    S.length = strlen(" Hello World")-1;
-    strcpy(T.ch," orl");
-    T.length = strlen (" orl")-1;
-    int t =Index_BF(S, T, 1);
-    if(t)
-        cout << "匹配成功！"<<t<<endl;
-    else
-        cout << "匹配失败！"<<t<<endl;
-}
-
 
