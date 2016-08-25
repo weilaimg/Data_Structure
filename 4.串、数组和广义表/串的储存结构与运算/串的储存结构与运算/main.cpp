@@ -40,7 +40,7 @@ typedef struct {
 
 /*********串的模式匹配算法***************/
 
-//BF(Brute-Force)算法：
+//-------------BF(Brute-Force)算法：
 int Index_BF(SString S,SString T,int pos){
     //返回模式T在主串中第pos个字符开始第一次出现的位置。若不存在，则返回0
     //其中，T非空，pos >= 1 && pos <= S.length;
@@ -56,18 +56,3 @@ int Index_BF(SString S,SString T,int pos){
     return 0;                                   //匹配失败
     
 }
-
-
-int main(){
-    SString S,T;
-    strcpy(S.ch," Hello World");
-    S.length = strlen(" Hello World")-1;
-    strcpy(T.ch," orl");
-    T.length = strlen (" orl")-1;
-    int t =Index_BF(S, T, 1);
-    if(t)
-        cout << "匹配成功！"<<t<<endl;
-    else
-        cout << "匹配失败！"<<t<<endl;
-}
-
