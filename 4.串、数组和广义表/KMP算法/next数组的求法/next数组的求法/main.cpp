@@ -13,27 +13,15 @@ using namespace std;
 void get_next (char T[] , int *next);
 
 void get_text (const char T[] , int text[]){
-    int i , j;
-    i = 0;j =1;
-    text[0] = 0;
+    int i=0 , j=1;
+    text[0] = -1;
     while(j<strlen(T)){
-        
-        if(T[i] == T[j]){
-            
-            i++;
-            text[j] = i;
-            j++;
-            
-        } else {
-            
-            i=0;
-            if(T[i]!=T[j]){
-                text[j] = 0;
-                j++;
-            }
-        
-        }
+        if(i==-1 || T[i] == T[j])
+            text[j++] = ++i;
+        else
+            i = text[i];
     }
+    text[0]++;
 }
 
 void test(){
@@ -49,7 +37,6 @@ void test(){
     cout << '\n';
 }
 
-int main()
-{
-    while (1) test();
+int main(){
+    test();
 }
