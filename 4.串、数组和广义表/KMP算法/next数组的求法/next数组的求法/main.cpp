@@ -31,7 +31,7 @@ void get_text (const char T[] , int text[]){
 }
 
 void test(){
-    char a[100] = "aaaab";
+    char a[100] = "abcabcac";
 //    cout << "a = ";
 //    cin >> a;
     int test[strlen(a)+1];
