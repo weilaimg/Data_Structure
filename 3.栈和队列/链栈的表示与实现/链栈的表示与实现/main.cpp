@@ -23,6 +23,7 @@ typedef  struct StackNode
     struct StackNode *next;
 }StackNode,*LinkStack;
 
+
 Status InitStack (LinkStack &S)
 {//构造一个空栈S，栈顶指针置空
     S=NULL;
@@ -34,7 +35,7 @@ Status Push (LinkStack &S,SElemType e)
     LinkStack p;
     p=new StackNode;
     p->data = e;
-    p->next =S;
+    p->next=S;
     S=p;
     return OK;
 }
@@ -57,3 +58,10 @@ SElemType GetTop(LinkStack S)
     return ERROR;
 }
 
+int main(){
+    LinkStack L;
+    InitStack(L);
+    Push (L , 98);
+    
+    
+}
