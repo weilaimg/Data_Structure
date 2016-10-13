@@ -51,17 +51,15 @@ Status Pop(LinkStack &S,SElemType &e)
     return OK;
 }
 
+Status StackEmpty(LinkStack S){
+    if(S = NULL)
+        return OK;
+    return ERROR;
+}
+
 SElemType GetTop(LinkStack S)
 {//返回S的栈顶元素，不修改栈顶指针
     if(S!=NULL)
         return S->data;
     return ERROR;
-}
-
-int main(){
-    LinkStack L;
-    InitStack(L);
-    Push (L , 98);
-    
-    
 }
